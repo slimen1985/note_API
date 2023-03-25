@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "notes-api"
+version = "0.1.0"
+description = "Created Notes_API"
+authors = ["slimen1985 <vadart1985@gmail.com>"]
+readme = "README.md"
+packages = [{include = "notes_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["all"], version = "^0.94.1"}
+alembic = "^1.10.2"
+sqlalchemy = "^2.0.6"
+psycopg2 = "^2.9.5"
+pydantic = "^1.10.6"
+uvicorn = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
