@@ -18,6 +18,19 @@ class Settings(BaseSettings):
     DB_HOST: str
     DB_PORT: int
 
+    INIT_NOTE: list = [
+        {"title": "first_note", "content": "This is my first note", "owner_id": 1},
+        {"title": "second_note", "content": "This is my second note", "owner_id": 2}
+    ]
+
+    INIT_USER: dict = {
+        "username": "User1",
+        "email": "user@test.com",
+        "password": "User_12345",
+        "is_active": "true",
+        "role_id": 1
+    }
+
     class Config:
         env_file = ENV_PATH
         env_file_encoding = "utf-8"
