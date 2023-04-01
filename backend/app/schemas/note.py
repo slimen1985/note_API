@@ -11,11 +11,11 @@ class NoteCreateModel(NoteBaseModel):
     pass
 
 
-class RoleUpdateModel(NoteBaseModel):
+class NoteUpdateModel(NoteBaseModel):
     pass
 
 
-class RoleModel(NoteBaseModel):
+class NoteModel(NoteBaseModel):
     id: int
 
     class Config:
