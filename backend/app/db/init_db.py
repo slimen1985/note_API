@@ -3,12 +3,13 @@ from sqlalchemy.orm import Session
 
 from app.core.config import Settings
 from app.schemas.user import UserCreateModel
-from app.shemas.note import NoteCreateModel
-from app.crud.user import create_init_user
+from app.schemas.note import NoteCreateModel
 
+from app.crud.user import create_init_user
+from app.crud.note import create_init_note
 
 settings = Settings()
-logger = logging.getLogger('bookshelf')
+logger = logging.getLogger('notes_API')
 
 
 def init_db(db: Session):

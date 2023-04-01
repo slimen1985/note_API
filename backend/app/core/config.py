@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     INIT_USER: dict = {
         "username": "User1",
         "email": "user@test.com",
-        "password": "User_12345",
+        "password": "Bchild@1985",
         "is_active": "true",
         "role_id": 1
     }

@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 from app.db.base_class import Base
+from .user import User
 
 
 class Note(Base):
@@ -10,4 +11,4 @@ class Note(Base):
     content = Column(String, nullable=False)
     owner_id = Column(Integer, ForeignKey("user.id"), nullable=False, default=2)
 
-    owner = relationship("User", back_populates="notes")
+    owner = relationship("User", back_populates="note")
