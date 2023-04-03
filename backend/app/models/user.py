@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
 
 from app.db.base_class import Base
-from .role import Role
 from .mixin import Timestamp
 
 
@@ -12,6 +11,7 @@ class User(Timestamp, Base):
     email = Column(String(50), nullable=False)
     password = Column(String(100), nullable=False)
     is_active = Column(Boolean, nullable=False)
-    role_id = Column(Integer, ForeignKey('role.id'), nullable=False, default=2)
+    role_id = Column(Integer, ForeignKey('role.id'), nullable=False)
 
     role = relationship("Role", back_populates="user")
+    note = relationship("Note", back_populates="user")

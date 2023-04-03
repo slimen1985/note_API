@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class NoteBaseModel(BaseModel):
     title: str
     content: str
-    owner_id: int
+    user_id: int
 
 
 class NoteCreateModel(NoteBaseModel):

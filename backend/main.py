@@ -5,7 +5,7 @@ from app.core.config import LOGGING_CONFIG
 import logging.config
 
 logging.config.dictConfig(LOGGING_CONFIG)
-logger = logging.getLogger("bookshelf")
+logger = logging.getLogger("notes_api")
 
 
 def start_application(config: Settings):
@@ -13,7 +13,7 @@ def start_application(config: Settings):
         debug=True,
         title=config.PROJECT_NAME,
         version=config.PROJECT_VERSION,
-        description="Book store emulator"
+        description="notes"
     )
     return application
 

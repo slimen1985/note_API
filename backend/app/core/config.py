@@ -19,8 +19,8 @@ class Settings(BaseSettings):
     DB_PORT: int
 
     INIT_NOTE: list = [
-        {"title": "first_note", "content": "This is my first note", "owner_id": 1},
-        {"title": "second_note", "content": "This is my second note", "owner_id": 2}
+        {"title": "first_note", "content": "This is my first note", "user_id": 1},
+        {"title": "second_note", "content": "This is my second note", "user_id": 2}
     ]
 
     INIT_USER: dict = {
