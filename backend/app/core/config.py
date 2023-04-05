@@ -64,7 +64,7 @@ LOGGING_CONFIG = {
         }
     },
     "loggers": {
-        "bookshelf": {
+        "notes_API": {
             "handlers": ["console", "file"],
             "level": "DEBUG"
         }

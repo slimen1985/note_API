@@ -3,9 +3,10 @@ from app.core.config import Settings
 
 from app.core.config import LOGGING_CONFIG
 import logging.config
+from app.api.api import api_router
 
 logging.config.dictConfig(LOGGING_CONFIG)
-logger = logging.getLogger("notes_api")
+logger = logging.getLogger("notes_API")
 
 
 def start_application(config: Settings):
@@ -19,11 +20,7 @@ def start_application(config: Settings):
 
 
 settings = Settings()
-
 app = start_application(settings)
+app.include_router(api_router)
 
 
-@app.get("/")
-async def root():
-    logger.debug("Start application")
-    return {"message": "Hello FastAPI"}

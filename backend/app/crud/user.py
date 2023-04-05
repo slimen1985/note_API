@@ -2,7 +2,7 @@ import logging
 from sqlalchemy.orm import Session
 from app.models.user import User
 
-logger = logging.getLogger('note_API')
+logger = logging.getLogger('notes_API')
 
 
 def create_init_user(db: Session, user: User) -> User:

@@ -12,4 +12,3 @@ class Note(Base):
 
     user = relationship("User", back_populates="note")
 
-

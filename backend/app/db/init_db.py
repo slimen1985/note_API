@@ -34,7 +34,7 @@ def create_note(db: Session):
     db_note = NoteCreateModel(
         title=note['title'],
         content=note['content'],
-        owner_id=note['owner_id']
+        user_id=note['user_id']
     )
     create_init_note(db, db_note)
 
