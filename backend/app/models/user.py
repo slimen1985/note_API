@@ -3,6 +3,8 @@ from sqlalchemy.orm import relationship
 
 from app.db.base_class import Base
 from .mixin import Timestamp
+from .role import Role
+from .note import Note
 
 
 class User(Timestamp, Base):
