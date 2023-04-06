@@ -14,4 +14,4 @@ class User(Timestamp, Base):
     role_id = Column(Integer, ForeignKey('role.id'), nullable=False)
 
     role = relationship("Role", back_populates="user")
-    note = relationship("Note", back_populates="user")
+    notes = relationship("Note", back_populates="user")
