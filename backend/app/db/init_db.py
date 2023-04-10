@@ -1,7 +1,9 @@
 import logging
-from sqlalchemy.orm import Session
 
+from pydantic import ValidationError
+from sqlalchemy.orm import Session
 from app.core.config import Settings
+
 from app.schemas.user import UserCreateModel
 from app.schemas.note import NoteCreateModel
 
@@ -19,14 +21,18 @@ def init_db(db: Session):
 
 def create_user(db: Session):
     user = settings.INIT_USER
-    db_user = UserCreateModel(
-        username=user['username'],
-        email=user['email'],
-        password=user['password'],
-        is_active=user['is_active'],
-        role_id=user['role_id']
-    )
-    create_init_user(db, db_user)
+    try:
+        db_user = UserCreateModel(
+            username=user['username'],
+            email=user['email'],
+            password=user['password'],
+            is_active=user['is_active'],
+            role_id=user['role_id']
+        )
+    except ValidationError as e:
+        logger.error(f"An error occur while creating model {e}")
+    else:
+        create_init_user(db, db_user)
 
 
 def create_note(db: Session):
@@ -36,10 +42,4 @@ def create_note(db: Session):
             content=note['content'],
             user_id=note['user_id']
         )
-    create_init_note(db, db_note)
-
-
-
-
-
-
+        create_init_note(db, db_note)

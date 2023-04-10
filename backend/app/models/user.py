@@ -3,6 +3,8 @@ from sqlalchemy.orm import relationship
 
 from app.db.base_class import Base
 from .mixin import Timestamp
+from .note import Note
+from .role import Role
 
 
 class User(Timestamp, Base):
@@ -14,4 +16,4 @@ class User(Timestamp, Base):
     role_id = Column(Integer, ForeignKey('role.id'), nullable=False)
 
     role = relationship("Role", back_populates="user")
-    note = relationship("Note", back_populates="user")
+    notes = relationship("Note", back_populates="user")
