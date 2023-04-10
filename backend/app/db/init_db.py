@@ -30,13 +30,13 @@ def create_user(db: Session):
 
 
 def create_note(db: Session):
-    note = settings.INIT_NOTE
-    db_note = NoteCreateModel(
-        title=note['title'],
-        content=note['content'],
-        owner_id=note['owner_id']
-    )
-    create_init_note(db, db_note)
+    for note in settings.INIT_NOTE:
+        db_note = NoteCreateModel(
+            title=note['title'],
+            content=note['content'],
+            user_id=note['user_id']
+        )
+        create_init_note(db, db_note)
 
 
 

@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 
     INIT_NOTE: list = [
         {"title": "first_note", "content": "This is my first note", "user_id": 1},
-        {"title": "second_note", "content": "This is my second note", "user_id": 2}
+        {"title": "second_note", "content": "This is my second note", "user_id": 1}
     ]
 
     INIT_USER: dict = {
