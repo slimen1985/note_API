@@ -14,8 +14,11 @@ settings = Settings()
 logger = logging.getLogger('notes_API')
 
 
-def init_db(db: Session):
+def init_db_user(db: Session):
     create_user(db)
+
+
+def init_db_note(db: Session):
     create_note(db)
 
 

@@ -25,3 +25,7 @@ class UserModel(UserBaseModel):
 
     class Config:
         orm_mode = True
+
+
+class UserPublicModel(UserModel):
+    pass

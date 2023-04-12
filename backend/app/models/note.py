@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
+from typing import Optional
+
+from pydantic import BaseModel
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 from app.db.base_class import Base
@@ -11,5 +14,19 @@ class Note(Base):
     content = Column(String, nullable=False)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=False)
 
-    user = relationship("User", back_populates="notes")
+    user_note = relationship("User", back_populates="note")
+
+
+class NoteCreate(BaseModel):
+    title: str
+    content: str
+    user_id: int
+
+
+class NoteUpdate(BaseModel):
+    title: Optional[str] = None
+    content: Optional[str] = None
+    is_active: Optional[bool] = None
+
+
 

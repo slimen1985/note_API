@@ -28,8 +28,7 @@ class Settings(BaseSettings):
         "email": "user@test.com",
         "password": "Bchild@1985",
         "is_active": "true",
-        "role_id": 1
-    }
+        "role_id": 1}
 
     class Config:
         env_file = ENV_PATH
