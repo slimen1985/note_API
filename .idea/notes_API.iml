@@ -7,6 +7,15 @@
       <sourceFolder url="file://$MODULE_DIR$/backend/app/db" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/app/models" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/backend/app/schemas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/alembic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/app/crud" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/logs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/static/images" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/templates" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/fontend" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/frontend" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/env" />
     </content>
     <orderEntry type="inheritedJdk" />

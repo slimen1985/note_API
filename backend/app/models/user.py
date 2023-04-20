@@ -8,9 +8,9 @@ from .role import Role
 
 class User(Timestamp, Base):
     id = Column(Integer, primary_key=True, nullable=False)
-    username = Column(String(50), nullable=False)
-    email = Column(String(50), nullable=False)
-    password = Column(String(100), nullable=False)
+    username = Column(String(255), nullable=False)
+    email = Column(String(255), nullable=False)
+    password = Column(String(255), nullable=False)
     is_active = Column(Boolean, nullable=False, default=True)
     role_id = Column(Integer, ForeignKey('role.id'), nullable=False)
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note {{ note.id }} - {{ note.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Note {{ note.id }} - {{ note.title }}</h1>
+    <p>{{ note.content }}</p>
+    <a href="/notes" class="button">Back to Notes</a>
+</body>
+</html>

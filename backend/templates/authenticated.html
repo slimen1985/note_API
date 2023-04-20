@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authenticated</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f1f1f1;
+            }
+            h2 {
+                color: #333;
+            }
+            p {
+                font-size: 18px;
+                color: #666;
+            }
+            form {
+                margin-top: 20px;
+                text-align: center;
+            }
+            input[type="submit"] {
+                padding: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #3e8e41;
+            }
+            .note-link {
+                margin-top: 20px;
+                font-size: 16px;
+                color: #666;
+            }
+            .note-link a {
+                color: #4CAF50;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center;">
+            <h2>Authenticated</h2>
+            <p>Welcome, {{ username }}!</p>
+            <form action="/" method="get">
+                <input type="submit" value="Logout">
+            </form>
+            <div class="note-link">
+                <p>Would you like to go to the notes menu page?</p>
+                <a href="/notes">Go to notes menu page</a>
+            </div>
+        </div>
+    </body>
+</html>

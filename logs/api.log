@@ -1,3 +1,146 @@
 DEBUG   2023-03-20 18:02:53,182 Start application
 DEBUG   2023-03-20 18:03:05,741 Start application
 ERROR   2023-04-09 15:44:16,122 Note does't with id=1 exist
+INFO    2023-04-11 17:58:30,796 Run initialization
+ERROR   2023-04-11 17:58:30,799 An error during db initialization Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+INFO    2023-04-11 18:00:21,442 Run initialization
+ERROR   2023-04-11 18:00:21,445 An error during db initialization Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+INFO    2023-04-11 18:02:06,088 Run initialization
+ERROR   2023-04-11 18:02:06,091 An error during db initialization Mapper 'Mapper[Role(role)]' has no property 'user'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
+INFO    2023-04-11 18:03:33,840 Run initialization
+INFO    2023-04-11 18:03:33,911 Created user <app.models.user.User object at 0x00000252BE70FF10>
+INFO    2023-04-11 18:03:33,919 Created note <app.models.note.Note object at 0x00000252BE70FF10>
+ERROR   2023-04-11 18:03:33,930 An error during db initialization (psycopg2.errors.ForeignKeyViolation) ОШИБКА:  INSERT или UPDATE в таблице "note" нарушает ограничение внешнего ключа "note_user_id_fkey"
+DETAIL:  Ключ (user_id)=(2) отсутствует в таблице "user".
+
+[SQL: INSERT INTO note (title, content, user_id) VALUES (%(title)s, %(content)s, %(user_id)s) RETURNING note.id]
+[parameters: {'title': 'second_note', 'content': 'This is my second note', 'user_id': 2}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+ERROR   2023-04-11 18:09:16,777 Note does't with id=2 exist
+INFO    2023-04-11 18:19:15,313 Run initialization
+ERROR   2023-04-11 18:19:15,313 An error during db initialization list indices must be integers or slices, not str
+INFO    2023-04-11 18:19:36,124 Run initialization
+ERROR   2023-04-11 18:19:36,124 An error during db initialization list indices must be integers or slices, not str
+INFO    2023-04-11 18:21:58,866 Run initialization
+ERROR   2023-04-11 18:21:58,866 An error during db initialization list indices must be integers or slices, not str
+INFO    2023-04-11 18:25:07,430 Run initialization
+ERROR   2023-04-11 18:25:07,430 An error during db initialization list indices must be integers or slices, not str
+INFO    2023-04-11 18:26:50,709 Run initialization
+INFO    2023-04-11 18:26:50,787 Created user <app.models.user.User object at 0x000001DAE341FB90>
+INFO    2023-04-11 18:26:50,793 Created note <app.models.note.Note object at 0x000001DAE341FB90>
+INFO    2023-04-11 18:26:50,796 Created note <app.models.note.Note object at 0x000001DAE341FD90>
+INFO    2023-04-11 18:26:50,797 End initialization
+INFO    2023-04-11 18:29:03,377 Get note <app.models.note.Note object at 0x00000201DC9B9210>
+ERROR   2023-04-11 18:29:07,853 Note does't with id=2 exist
+INFO    2023-04-11 18:29:12,003 Get note <app.models.note.Note object at 0x00000201DB957090>
+INFO    2023-04-12 18:34:04,560 Created note <app.models.note.Note object at 0x0000023BF73482D0>
+INFO    2023-04-12 18:35:01,099 Deleted note with id=5
+INFO    2023-04-12 18:36:28,701 Updated note <app.models.note.Note object at 0x0000023BF73CDF90>
+INFO    2023-04-12 18:45:59,722 Get note <app.models.note.Note object at 0x0000023CFA7737D0>
+INFO    2023-04-12 20:13:29,458 Created note <app.models.note.Note object at 0x0000015D18E72DD0>
+INFO    2023-04-15 16:41:22,272 Get note <app.models.note.Note object at 0x000002369EB83FD0>
+INFO    2023-04-15 16:41:33,606 Get note <app.models.note.Note object at 0x000002369EB83FD0>
+INFO    2023-04-15 16:41:38,965 Get note <app.models.note.Note object at 0x000002369EB9AA90>
+INFO    2023-04-15 16:44:36,167 Get note <app.models.note.Note object at 0x000002007B6AEE50>
+INFO    2023-04-15 16:44:39,510 Get note <app.models.note.Note object at 0x000002007B6B8250>
+INFO    2023-04-15 16:45:31,994 Get note <app.models.note.Note object at 0x000002007B6B9BD0>
+INFO    2023-04-15 16:45:40,455 Get note <app.models.note.Note object at 0x000002007B6BA190>
+INFO    2023-04-15 16:45:50,247 Get note <app.models.note.Note object at 0x000002007B6BC2D0>
+INFO    2023-04-15 16:48:46,392 Get note <app.models.note.Note object at 0x000002007B6BDD10>
+INFO    2023-04-15 16:48:51,309 Get note <app.models.note.Note object at 0x000002007B6BE390>
+INFO    2023-04-15 16:50:31,495 Get note <app.models.note.Note object at 0x000002007B6BFE90>
+INFO    2023-04-15 16:50:33,933 Get note <app.models.note.Note object at 0x000002007B6C04D0>
+INFO    2023-04-15 16:50:37,388 Get note <app.models.note.Note object at 0x000002007B6C0790>
+INFO    2023-04-15 16:53:10,995 Get note <app.models.note.Note object at 0x000002007B6C16D0>
+INFO    2023-04-15 16:53:26,652 Get note <app.models.note.Note object at 0x000002007B6C2E90>
+INFO    2023-04-15 17:04:13,900 Created note <app.models.note.Note object at 0x0000019D26B8AF90>
+INFO    2023-04-15 17:47:21,476 Get note <app.models.note.Note object at 0x0000016EFEA5A1D0>
+INFO    2023-04-15 17:47:27,909 Get note <app.models.note.Note object at 0x0000016EFEA570D0>
+INFO    2023-04-15 17:52:29,165 Get note <app.models.note.Note object at 0x0000016EFEE9A490>
+INFO    2023-04-15 18:00:12,165 Get note <app.models.note.Note object at 0x0000016EFEE9BDD0>
+INFO    2023-04-15 18:00:32,089 Get note <app.models.note.Note object at 0x0000016EFEE9DA50>
+INFO    2023-04-15 18:05:18,938 Get note <app.models.note.Note object at 0x0000026EA71C2990>
+INFO    2023-04-15 18:12:51,010 Get note <app.models.note.Note object at 0x0000025593562D10>
+INFO    2023-04-15 18:18:30,034 Get note <app.models.note.Note object at 0x000002B0E4799010>
+INFO    2023-04-15 18:20:43,817 Get note <app.models.note.Note object at 0x0000023DA43B3B90>
+INFO    2023-04-15 18:20:48,097 Get note <app.models.note.Note object at 0x0000023DA43B8550>
+INFO    2023-04-15 18:26:23,155 Get note <app.models.note.Note object at 0x0000015BAF5CE950>
+INFO    2023-04-16 06:49:31,473 Get note <app.models.note.Note object at 0x000001F32E38B610>
+INFO    2023-04-16 06:49:37,440 Get note <app.models.note.Note object at 0x000001F32E392B50>
+INFO    2023-04-16 07:14:59,210 Get note <app.models.note.Note object at 0x000002354E58FE90>
+INFO    2023-04-16 07:15:37,770 Get note <app.models.note.Note object at 0x0000021BC9FCB650>
+INFO    2023-04-16 07:24:42,064 Get note <app.models.note.Note object at 0x0000021BC9FF9C50>
+INFO    2023-04-16 07:24:49,356 Get note <app.models.note.Note object at 0x0000021BC9FFA190>
+INFO    2023-04-16 07:25:33,715 Get note <app.models.note.Note object at 0x0000021BC9FFABD0>
+INFO    2023-04-16 07:30:27,683 Get note <app.models.note.Note object at 0x0000021BC9FFB0D0>
+INFO    2023-04-16 07:30:39,370 Get note <app.models.note.Note object at 0x0000021BC9FFB310>
+INFO    2023-04-16 07:33:50,078 Get note <app.models.note.Note object at 0x000002120AE55D90>
+INFO    2023-04-16 07:34:55,770 Updated note <app.models.note.Note object at 0x000002120ADA8650>
+INFO    2023-04-16 07:36:01,819 Deleted note with id=6
+INFO    2023-04-16 07:52:26,485 Get note <app.models.note.Note object at 0x000002E4DBDC0C50>
+INFO    2023-04-16 08:09:06,111 Get note <app.models.note.Note object at 0x000002E4DC20E090>
+INFO    2023-04-16 08:09:28,570 Get note <app.models.note.Note object at 0x000002E4DC200F90>
+INFO    2023-04-16 09:23:05,594 Get note <app.models.note.Note object at 0x00000256646EAE90>
+INFO    2023-04-16 09:23:17,121 Get note <app.models.note.Note object at 0x00000256646EBE50>
+INFO    2023-04-16 09:33:56,339 Get note <app.models.note.Note object at 0x0000018D36D754D0>
+INFO    2023-04-16 09:34:02,594 Get note <app.models.note.Note object at 0x0000018D36D76110>
+INFO    2023-04-16 09:48:25,899 Get note <app.models.note.Note object at 0x0000018D371C1C10>
+INFO    2023-04-16 09:48:41,683 Get note <app.models.note.Note object at 0x0000018D371C1110>
+INFO    2023-04-16 09:52:23,867 Get note <app.models.note.Note object at 0x0000018D36D20E90>
+INFO    2023-04-16 09:52:26,834 Get note <app.models.note.Note object at 0x0000018D36D65F90>
+INFO    2023-04-16 09:52:29,905 Get note <app.models.note.Note object at 0x0000018D36D64E90>
+INFO    2023-04-16 09:52:39,884 Get note <app.models.note.Note object at 0x0000018D36D79C10>
+INFO    2023-04-16 10:06:27,837 Get note <app.models.note.Note object at 0x00000214460DBD90>
+INFO    2023-04-16 10:28:21,932 Get note <app.models.note.Note object at 0x00000264FF34A950>
+INFO    2023-04-16 10:28:25,285 Get note <app.models.note.Note object at 0x00000264FF34B5D0>
+INFO    2023-04-16 10:31:28,575 Get note <app.models.note.Note object at 0x00000264FF3443D0>
+INFO    2023-04-18 18:58:39,193 Get note <app.models.note.Note object at 0x000001E73C665610>
+INFO    2023-04-18 19:20:34,131 Get note <app.models.note.Note object at 0x000001B6566E3610>
+INFO    2023-04-18 19:26:30,723 Get note <app.models.note.Note object at 0x0000011233A4C790>
+INFO    2023-04-18 19:26:32,742 Get note <app.models.note.Note object at 0x0000011235CF8AD0>
+INFO    2023-04-18 19:27:15,694 Get note <app.models.note.Note object at 0x00000285B74EB350>
+INFO    2023-04-18 19:29:37,025 Get note <app.models.note.Note object at 0x0000017A5D7E2390>
+INFO    2023-04-18 19:31:19,237 Get note <app.models.note.Note object at 0x0000017A5D892BD0>
+INFO    2023-04-18 19:33:36,092 Get note <app.models.note.Note object at 0x0000017A5D89A590>
+INFO    2023-04-18 19:33:38,276 Get note <app.models.note.Note object at 0x0000017A5D89A790>
+INFO    2023-04-18 19:33:42,316 Get note <app.models.note.Note object at 0x0000017A5D89A910>
+INFO    2023-04-18 19:34:07,691 Get note <app.models.note.Note object at 0x0000017A5D8A77D0>
+INFO    2023-04-18 19:34:21,148 Get note <app.models.note.Note object at 0x0000017A5D8A7A90>
+INFO    2023-04-18 19:34:23,044 Get note <app.models.note.Note object at 0x0000017A5D8A7D50>
+INFO    2023-04-18 19:34:29,285 Get note <app.models.note.Note object at 0x0000017A5D8A6E50>
+INFO    2023-04-18 19:34:31,381 Get note <app.models.note.Note object at 0x0000017A5D8A7ED0>
+INFO    2023-04-18 19:34:37,036 Get note <app.models.note.Note object at 0x0000017A5D8A80D0>
+INFO    2023-04-18 19:38:42,981 Get note <app.models.note.Note object at 0x0000017A5D8A8A50>
+INFO    2023-04-18 19:38:45,549 Get note <app.models.note.Note object at 0x0000017A5D8A8CD0>
+INFO    2023-04-18 19:38:48,523 Get note <app.models.note.Note object at 0x0000017A5D8A8F50>
+INFO    2023-04-18 19:51:58,356 Get note <app.models.note.Note object at 0x0000028E4AA34050>
+INFO    2023-04-18 19:52:00,882 Get note <app.models.note.Note object at 0x0000028E4AA35810>
+INFO    2023-04-18 20:04:48,441 Get note <app.models.note.Note object at 0x0000025DA4082E50>
+INFO    2023-04-18 20:04:51,066 Get note <app.models.note.Note object at 0x0000025DA4084490>
+INFO    2023-04-18 20:04:52,866 Get note <app.models.note.Note object at 0x0000025DA4084FD0>
+INFO    2023-04-18 20:08:36,132 Get note <app.models.note.Note object at 0x0000025DA3FE7F90>
+INFO    2023-04-18 20:08:38,084 Get note <app.models.note.Note object at 0x0000025DA4086350>
+INFO    2023-04-18 20:08:40,842 Get note <app.models.note.Note object at 0x0000025DA4086ED0>
+INFO    2023-04-18 20:08:56,729 Get note <app.models.note.Note object at 0x0000025DA4087050>
+INFO    2023-04-18 20:25:29,145 Get note <app.models.note.Note object at 0x0000016DBEA66010>
+INFO    2023-04-18 20:25:31,072 Get note <app.models.note.Note object at 0x0000016DBEA6C2D0>
+INFO    2023-04-18 20:25:33,233 Get note <app.models.note.Note object at 0x0000016DBEA6D6D0>
+INFO    2023-04-19 17:55:59,144 Created note <app.models.note.Note object at 0x0000016B1C1079D0>
+INFO    2023-04-19 18:15:23,408 Get note <app.models.note.Note object at 0x000001E62BE7D4D0>
+ERROR   2023-04-19 18:15:28,615 Note does't with id=11 exist
+INFO    2023-04-19 18:15:38,276 Get note <app.models.note.Note object at 0x000001E62BE6EAD0>
+ERROR   2023-04-19 18:15:41,295 Note does't with id=2 exist
+INFO    2023-04-19 18:16:06,593 Created note <app.models.note.Note object at 0x000001E62BE13E50>
+INFO    2023-04-19 18:32:32,763 Get note <app.models.note.Note object at 0x000002A01E554F50>
+INFO    2023-04-19 18:32:34,465 Get note <app.models.note.Note object at 0x000002A01E555610>
+INFO    2023-04-19 18:35:54,161 Get note <app.models.note.Note object at 0x0000020DB83F28D0>
+INFO    2023-04-19 18:35:56,057 Get note <app.models.note.Note object at 0x0000020DB83F4590>
+INFO    2023-04-19 18:35:57,722 Get note <app.models.note.Note object at 0x0000020DB83F4D90>
+INFO    2023-04-19 18:36:01,705 Get note <app.models.note.Note object at 0x0000020DB83F5890>
+INFO    2023-04-19 18:36:05,401 Get note <app.models.note.Note object at 0x0000020DB83F5B90>
+INFO    2023-04-19 18:40:54,314 Get note <app.models.note.Note object at 0x0000020DB83F6750>
+INFO    2023-04-19 18:49:30,314 Get note <app.models.note.Note object at 0x000002ACA1515050>
+INFO    2023-04-19 18:49:32,553 Get note <app.models.note.Note object at 0x000002ACA1514990>
+INFO    2023-04-19 18:49:34,601 Get note <app.models.note.Note object at 0x000002ACA1516B10>
+INFO    2023-04-19 18:49:36,512 Get note <app.models.note.Note object at 0x000002ACA1517250>
+INFO    2023-04-19 18:50:38,391 Deleted note with id=7

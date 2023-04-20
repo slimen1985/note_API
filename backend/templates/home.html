@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-image: url("../static/images/home.jpg");
+                background-size: cover;
+                background-position: center;
+                text-align: center;
+            }
+            .form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                display: inline-block;
+                margin-top: 50px;
+            }
+            h1 {
+                color: #333;
+            }
+            input[type="text"], input[type="password"] {
+                padding: 10px;
+                margin: 10px;
+                width: 300px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                font-size: 16px;
+            }
+            input[type="submit"] {
+                padding: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+            a {
+                color: #4CAF50;
+                text-decoration: none;
+                font-size: 16px;
+                display: block;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Notes_API</h1>
+        <div class="form">
+            <form action="/" method="post">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" value="Login">
+            </form>
+            <a href="/register">Register</a>
+        </div>
+    </body>
+</html>
