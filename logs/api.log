@@ -144,3 +144,4 @@ INFO    2023-04-19 18:49:32,553 Get note <app.models.note.Note object at 0x00000
 INFO    2023-04-19 18:49:34,601 Get note <app.models.note.Note object at 0x000002ACA1516B10>
 INFO    2023-04-19 18:49:36,512 Get note <app.models.note.Note object at 0x000002ACA1517250>
 INFO    2023-04-19 18:50:38,391 Deleted note with id=7
+INFO    2023-04-20 17:29:04,137 Get note <app.models.note.Note object at 0x0000024E1A2B2B10>
